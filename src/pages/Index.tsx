@@ -9,6 +9,7 @@ import Certifications from '../components/Certifications';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import StarryBackground from '../components/StarryBackground';
 
 const Index = () => {
   useEffect(() => {
@@ -17,7 +18,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-[#f5f5f5]">
+    <div className="min-h-screen bg-[#000000] text-[#f5f5f5] relative">
+      <StarryBackground />
       <Header />
       <main>
         <section id="home">
