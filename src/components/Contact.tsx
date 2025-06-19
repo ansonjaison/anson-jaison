@@ -30,19 +30,19 @@ const Contact = () => {
         <div className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 border border-gray-800">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="text-[#f97316]">LET'S BUILD</span><br />
+              <span className="text-[#007f5f]">LET'S BUILD</span><br />
               <span className="text-[#f5f5f5]">SOMETHING COOL</span><br />
-              <span className="text-[#f97316]">TOGETHER.</span>
+              <span className="text-[#007f5f]">TOGETHER.</span>
             </h2>
           </div>
 
           <div className="text-center mb-8">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <div className="flex items-center space-x-2 text-lg">
-                <Mail size={20} className="text-[#f97316]" />
+                <Mail size={20} className="text-[#007f5f]" />
                 <a 
                   href="mailto:ansonjaison@outlook.in"
-                  className="text-[#f5f5f5] hover:text-[#f97316] transition-colors duration-300 font-medium"
+                  className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300 font-medium"
                 >
                   ansonjaison@outlook.in
                 </a>
@@ -69,7 +69,7 @@ const Contact = () => {
                   >
                     <IconComponent 
                       size={24} 
-                      className="text-[#aaaaaa] group-hover:text-[#f97316] transition-colors duration-300"
+                      className="text-[#aaaaaa] group-hover:text-[#007f5f] transition-colors duration-300"
                     />
                   </a>
                 );
@@ -80,7 +80,7 @@ const Contact = () => {
           <div className="text-center">
             <a
               href="mailto:ansonjaison@outlook.in"
-              className="inline-flex items-center space-x-2 bg-[#f97316] text-[#0d0d0d] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#ea580c] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f97316]/20"
+              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20"
             >
               <Mail size={20} />
               <span>Start a Conversation</span>

@@ -1,53 +1,30 @@
 
 import React from 'react';
+import { Code, Server, Database, Settings, Terminal, Palette } from 'lucide-react';
 
 const TechStack = () => {
-  const techCategories = [
-    {
-      title: 'FRONTEND',
-      color: '#f97316',
-      techs: [
-        { name: 'JavaScript', icon: '🟨' },
-        { name: 'HTML', icon: '🟥' },
-        { name: 'CSS', icon: '🟦' },
-        { name: 'React', icon: '⚛️' },
-        { name: 'Tailwind CSS', icon: '💙' },
-        { name: 'C++', icon: '🧮' }
-      ]
-    },
-    {
-      title: 'BACKEND',
-      color: '#10b981',
-      techs: [
-        { name: 'Next.js', icon: '⏱️' },
-        { name: 'React Router', icon: '🔁' },
-        { name: 'Nodemon', icon: '🧪' },
-        { name: 'Flask', icon: '🍜' },
-        { name: 'Python', icon: '🐍' },
-        { name: 'C', icon: '💻' }
-      ]
-    },
-    {
-      title: 'DATABASE',
-      color: '#8b5cf6',
-      techs: [
-        { name: 'Mongoose', icon: '🧬' },
-        { name: 'Oracle', icon: '🟥' },
-        { name: 'Supabase', icon: '💚' },
-        { name: 'Firebase', icon: '🔥' }
-      ]
-    },
-    {
-      title: 'TOOLS & OTHER TECH',
-      color: '#06b6d4',
-      techs: [
-        { name: 'Git', icon: '🧠' },
-        { name: 'GitHub', icon: '🐙' },
-        { name: 'VS Code', icon: '🖥️' },
-        { name: 'Notion', icon: '📝' },
-        { name: 'Loveable', icon: '💝' }
-      ]
-    }
+  const technologies = [
+    { name: 'JavaScript', icon: Code, category: 'language' },
+    { name: 'HTML', icon: Code, category: 'markup' },
+    { name: 'CSS', icon: Palette, category: 'styling' },
+    { name: 'React', icon: Code, category: 'frontend' },
+    { name: 'Tailwind CSS', icon: Palette, category: 'styling' },
+    { name: 'C++', icon: Terminal, category: 'language' },
+    { name: 'Next.js', icon: Server, category: 'framework' },
+    { name: 'React Router', icon: Code, category: 'routing' },
+    { name: 'Nodemon', icon: Settings, category: 'tool' },
+    { name: 'Flask', icon: Server, category: 'backend' },
+    { name: 'Python', icon: Terminal, category: 'language' },
+    { name: 'C', icon: Terminal, category: 'language' },
+    { name: 'Mongoose', icon: Database, category: 'database' },
+    { name: 'Oracle', icon: Database, category: 'database' },
+    { name: 'Supabase', icon: Database, category: 'database' },
+    { name: 'Firebase', icon: Database, category: 'database' },
+    { name: 'Git', icon: Terminal, category: 'vcs' },
+    { name: 'GitHub', icon: Settings, category: 'platform' },
+    { name: 'VS Code', icon: Settings, category: 'editor' },
+    { name: 'Notion', icon: Settings, category: 'productivity' },
+    { name: 'Loveable', icon: Settings, category: 'platform' }
   ];
 
   return (
@@ -55,46 +32,37 @@ const TechStack = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="text-[#f97316]">Tools &</span> Technologies I Use
+            <span className="text-[#007f5f]">Tools &</span> Technologies I Use
           </h2>
           <p className="text-lg text-[#aaaaaa] max-w-3xl mx-auto">
-            Here are the tools and technologies I've explored, built with, or am currently learning — grouped in a way that reflects how I think and work.
+            Here are the tools and technologies I've explored, built with, or am currently learning.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {techCategories.map((category, categoryIndex) => (
-            <div
-              key={category.title}
-              className="bg-[#1a1a1a] rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-all duration-300 group"
-            >
-              <h3 
-                className="text-lg font-bold mb-6 uppercase tracking-wide"
-                style={{ color: category.color }}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {technologies.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <div
+                key={tech.name}
+                className="bg-[#1a1a1a] rounded-xl p-4 border border-gray-800 hover:border-[#007f5f] transition-all duration-300 group hover:scale-105 cursor-pointer"
               >
-                {category.title}
-              </h3>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {category.techs.map((tech, techIndex) => (
-                  <div
-                    key={tech.name}
-                    className="flex flex-col items-center p-3 rounded-lg hover:bg-[#2a2a2a] transition-all duration-300 hover:scale-105 group cursor-pointer"
+                <div className="flex flex-col items-center text-center space-y-3">
+                  <div 
+                    className="p-3 rounded-lg bg-[#2a2a2a] group-hover:bg-[#007f5f]/20 transition-colors duration-300"
                   >
-                    <div 
-                      className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300"
-                      style={{ filter: `drop-shadow(0 0 8px ${category.color}40)` }}
-                    >
-                      {tech.icon}
-                    </div>
-                    <span className="text-sm text-center text-[#aaaaaa] group-hover:text-[#f5f5f5] transition-colors duration-300">
-                      {tech.name}
-                    </span>
+                    <IconComponent 
+                      size={24} 
+                      className="text-[#aaaaaa] group-hover:text-[#007f5f] transition-colors duration-300"
+                    />
                   </div>
-                ))}
+                  <span className="text-sm font-medium text-[#aaaaaa] group-hover:text-[#f5f5f5] transition-colors duration-300">
+                    {tech.name}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

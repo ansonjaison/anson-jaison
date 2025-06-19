@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-[#f97316] cursor-pointer" onClick={() => scrollToSection('#home')}>
+            <h1 className="text-2xl font-bold text-[#007f5f] cursor-pointer" onClick={() => scrollToSection('#home')}>
               Anson
             </h1>
           </div>
@@ -39,10 +39,10 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-[#f5f5f5] hover:text-[#f97316] transition-colors duration-300 relative group"
+                className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#f97316] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#007f5f] transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('#contact')}
-              className="bg-[#f97316] text-[#0d0d0d] px-6 py-2 rounded-lg font-semibold hover:bg-[#ea580c] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f97316]/20"
+              className="bg-[#007f5f] text-[#f5f5f5] px-6 py-2 rounded-lg font-semibold hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20"
             >
               Connect
             </button>
@@ -61,7 +61,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-[#f5f5f5] hover:text-[#f97316] transition-colors duration-300"
+              className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -76,14 +76,14 @@ const Header = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-[#f5f5f5] hover:text-[#f97316] transition-colors duration-300"
+                  className="block w-full text-left px-3 py-2 text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300"
                 >
                   {item.name}
                 </button>
               ))}
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="block w-full text-left px-3 py-2 bg-[#f97316] text-[#0d0d0d] rounded-lg font-semibold mt-4 hover:bg-[#ea580c] transition-colors duration-300"
+                className="block w-full text-left px-3 py-2 bg-[#007f5f] text-[#f5f5f5] rounded-lg font-semibold mt-4 hover:bg-[#00664d] transition-colors duration-300"
               >
                 Connect
               </button>

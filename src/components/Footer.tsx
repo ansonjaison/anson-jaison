@@ -32,7 +32,7 @@ const Footer = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-[#aaaaaa] hover:text-[#f97316] transition-colors duration-300"
+                className="text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300"
               >
                 {item.name}
               </button>
