@@ -1,17 +1,16 @@
 
 import React from 'react';
-import { Code, Server, Database, Settings, Terminal, Palette } from 'lucide-react';
+import { Code, Server, Database, Settings, Terminal, Palette, Globe, FileText, Workflow } from 'lucide-react';
 
 const TechStack = () => {
   const technologies = [
     { name: 'JavaScript', icon: Code, category: 'language' },
-    { name: 'HTML', icon: Code, category: 'markup' },
+    { name: 'HTML', icon: Globe, category: 'markup' },
     { name: 'CSS', icon: Palette, category: 'styling' },
-    { name: 'React', icon: Code, category: 'frontend' },
     { name: 'Tailwind CSS', icon: Palette, category: 'styling' },
     { name: 'C++', icon: Terminal, category: 'language' },
     { name: 'Next.js', icon: Server, category: 'framework' },
-    { name: 'React Router', icon: Code, category: 'routing' },
+    { name: 'React Router', icon: Workflow, category: 'routing' },
     { name: 'Nodemon', icon: Settings, category: 'tool' },
     { name: 'Flask', icon: Server, category: 'backend' },
     { name: 'Python', icon: Terminal, category: 'language' },
@@ -23,7 +22,7 @@ const TechStack = () => {
     { name: 'Git', icon: Terminal, category: 'vcs' },
     { name: 'GitHub', icon: Settings, category: 'platform' },
     { name: 'VS Code', icon: Settings, category: 'editor' },
-    { name: 'Notion', icon: Settings, category: 'productivity' },
+    { name: 'Notion', icon: FileText, category: 'productivity' },
     { name: 'Loveable', icon: Settings, category: 'platform' }
   ];
 
