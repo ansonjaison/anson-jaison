@@ -26,7 +26,9 @@ const StarryBackground = () => {
               enable: true,
               mode: "attract",
             },
-            resize: true,
+            resize: {
+              enable: true,
+            },
           },
           modes: {
             attract: {
@@ -60,17 +62,19 @@ const StarryBackground = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              value_area: 800,
             },
             value: 80,
           },
           opacity: {
             value: 0.5,
-            random: true,
+            random: {
+              enable: true,
+            },
             animation: {
               enable: true,
               speed: 1,
-              minimumValue: 0.1,
+              min: 0.1,
             },
           },
           shape: {
@@ -78,7 +82,6 @@ const StarryBackground = () => {
           },
           size: {
             value: { min: 1, max: 3 },
-            random: true,
           },
         },
         detectRetina: true,
