@@ -16,12 +16,12 @@ const Certifications = () => {
       issuer: 'NPTEL',
       date: 'Mar 2024',
       description: 'NPTEL-certified foundational course on C programming, covering syntax, variables, loops, and problem-solving through structured coding.',
-      certificateUrl: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS02S3481003333004243'
+      certificateUrl: 'https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs02/Course/NPTEL24CS02S34810033330042439.pdf'
     },
     {
       title: 'Introduction to Generative AI',
       issuer: 'Google Cloud',
-      date: '2024',
+      date: 'Oct 2024',
       description: 'Completion badge from Google Cloud\'s Generative AI course, covering the basics of generative models, LLMs, and ethical AI usage in modern applications.',
       certificateUrl: 'https://www.cloudskillsboost.google/public_profiles/d7bb3821-f608-4010-9f2d-f70cf2902cf8/badges/12012520'
     },
