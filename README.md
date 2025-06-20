@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Anson Jaison | Portfolio
 
-## Project info
+> A creative and minimalist developer portfolio built visually with [Lovable](https://lovable.dev/@anson) — blending powerful UI design with modern frontend tech.
 
-**URL**: https://lovable.dev/projects/62aa7fba-f65a-4e27-b1e2-fe447b677ab6
+![Portfolio Banner](https://ansonjaison.github.io/uploads/how-i-build-portfolio-website-using-lovable/anson-jaison-portfolio.png)
 
-## How can I edit this code?
+Welcome to the GitHub repository for my personal portfolio website — a digital space where I showcase my projects, blog, design sense, and journey as a student exploring technology, design, and storytelling.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Live Site
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/62aa7fba-f65a-4e27-b1e2-fe447b677ab6) and start prompting.
+🔗 [https://anson-jaison.lovable.app](https://anson-jaison.lovable.app)
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧰 Built With
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This portfolio is built on a **modern frontend stack** using **Lovable** (a no-code/low-code platform with dev mode). The project prioritizes performance, clean UI, dark aesthetics, and minimal footprint.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ⚙️ Tech Stack
 
-Follow these steps:
+| Category       | Tools / Frameworks                             |
+|----------------|------------------------------------------------|
+| Platform       | [Lovable](https://lovable.dev/) (Free Plan)   |
+| Frontend       | React `v18.3.1`, TypeScript, Vite              |
+| Styling        | Tailwind CSS, `shadcn/ui`, `lucide-react`      |
+| Animations     | Framer Motion                                  |
+| Routing        | React Router DOM                               |
+| State Mgmt     | TanStack Query (React Query)                   |
+| Icons          | Lucide                                         |
+| Package Mgmt   | Bun + npm hybrid                               |
+| Hosting        | Lovable CDN                                    |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ✨ Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+- ⚡ **Blazing-fast** performance with Vite + React 18
+- 🌑 **Dark-mode only** UI with sleek transitions
+- 📱 **Mobile-first responsive** design
+- 💻 **Modular** component architecture with reusability
+- ✨ **Framer Motion**-powered animations
+- 🧠 Integrated with **custom hooks** & utility functions
+- 🔗 External asset rendering (projects, blogs, media)
+- 📊 Analytics integrated (Google Analytics)
+- 🧼 Clean SEO + Open Graph + Twitter card support
+- 💾 Custom favicons via Netlify-hosted assets
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🔧 Deployment & Hosting
 
-**Use GitHub Codespaces**
+This site is hosted via [Lovable's](https://lovable.dev) free tier:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **No backend/server setup**
+- Auto CDN delivery
+- Visual builder + custom code support
+- Deployed directly from Lovable's dev-friendly interface
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## ✍️ Author
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Anson Jaison**  
+📧 [ansonjaison@outlook.in](mailto:ansonjaison@outlook.in)  
+🔗 [Portfolio](https://anson-jaison.lovable.app) | [Blog](https://ansonblogs.netlify.app) | [Twitter](https://twitter.com/i_ansonjaison)
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/62aa7fba-f65a-4e27-b1e2-fe447b677ab6) and click on Share -> Publish.
+## 🙏 Acknowledgements
 
-## Can I connect a custom domain to my Lovable project?
+- [Lovable](https://lovable.dev) — for enabling visual development with dev-level freedom  
+- [shadcn/ui](https://ui.shadcn.dev) — for clean UI primitives  
+- [Framer Motion](https://www.framer.com/motion/) — for magical animations  
+- [Lucide Icons](https://lucide.dev) — for minimal, elegant icons  
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📝 License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This portfolio is open for learning and inspiration. Feel free to fork and customize it for your own use, but please credit appropriately.
