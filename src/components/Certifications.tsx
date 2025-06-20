@@ -5,25 +5,39 @@ import { Award, ExternalLink, Calendar } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
-      title: 'Full Stack Web Development',
-      issuer: 'FreeCodeCamp',
-      date: '2023',
-      description: 'Comprehensive certification covering HTML, CSS, JavaScript, React, Node.js, and database management.',
-      certificateUrl: '#'
+      title: 'Internship - Python & ML',
+      issuer: 'Revertech IT Solutions Private Limited',
+      date: 'Jul 2024',
+      description: 'Hands-on internship focusing on Python programming and Machine Learning fundamentals, including practical project experience.',
+      certificateUrl: 'https://ansonblogs.netlify.app/certificates/Internship%20Python%20&%20ML%20-%20Revertech.pdf'
     },
     {
-      title: 'Python for Data Science',
-      issuer: 'IBM',
-      date: '2023',
-      description: 'Deep dive into Python programming with focus on data analysis, visualization, and machine learning basics.',
-      certificateUrl: '#'
+      title: 'Introduction to Programming in C',
+      issuer: 'NPTEL',
+      date: 'Mar 2024',
+      description: 'NPTEL-certified foundational course on C programming, covering syntax, variables, loops, and problem-solving through structured coding.',
+      certificateUrl: 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS02S3481003333004243'
     },
     {
-      title: 'Cloud Computing Fundamentals',
+      title: 'Introduction to Generative AI',
       issuer: 'Google Cloud',
-      date: '2022',
-      description: 'Foundation course covering cloud architecture, services, and deployment strategies on Google Cloud Platform.',
-      certificateUrl: '#'
+      date: '2024',
+      description: 'Completion badge from Google Cloud\'s Generative AI course, covering the basics of generative models, LLMs, and ethical AI usage in modern applications.',
+      certificateUrl: 'https://www.cloudskillsboost.google/public_profiles/d7bb3821-f608-4010-9f2d-f70cf2902cf8/badges/12012520'
+    },
+    {
+      title: 'Introduction to OpenAI GPT Models',
+      issuer: 'Infosys',
+      date: 'Jul 2024',
+      description: 'Introductory course on OpenAI GPT models, exploring large language model fundamentals, capabilities, and responsible AI practices.',
+      certificateUrl: 'https://ansonblogs.netlify.app/certificates/Infosys%20Introduction%20to%20OpenAi%20GPT%20Models.pdf'
+    },
+    {
+      title: 'Fundamentals of the C Language: Variables & Datatypes',
+      issuer: 'Infosys',
+      date: 'Mar 2023',
+      description: 'A beginner-level course introducing the core concepts of the C language, focusing on data types, memory, and variable operations.',
+      certificateUrl: 'https://ansonblogs.netlify.app/certificates/Infosys%20-%20Fundamentals%20of%20the%20C%20Language%20Variables%20&%20Datatypes.pdf'
     }
   ];
 
