@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, X, Linkedin, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const socialLinks = [
@@ -27,16 +28,34 @@ const Contact = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 border border-gray-800">
-          <div className="text-center mb-8">
+        <motion.div 
+          className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 border border-gray-800"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               <span className="text-[#007f5f]">LET'S BUILD</span><br />
               <span className="text-[#f5f5f5]">SOMETHING COOL</span><br />
               <span className="text-[#007f5f]">TOGETHER.</span>
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="text-center mb-8">
+          <motion.div 
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <div className="flex items-center space-x-2 text-lg">
                 <Mail size={20} className="text-[#007f5f]" />
@@ -53,40 +72,68 @@ const Contact = () => {
               Connect on socials
             </p>
 
-            <div className="flex justify-center space-x-6">
-              {socialLinks.map((social) => {
+            <motion.div 
+              className="flex justify-center space-x-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
-                  <a
+                  <motion.a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-4 bg-[#2a2a2a] rounded-full border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-110"
+                    className="group p-4 bg-[#2a2a2a] rounded-full border border-gray-700 transition-all duration-300"
                     style={{
                       '--hover-color': social.color
                     } as React.CSSProperties}
+                    whileHover={{ 
+                      scale: 1.1,
+                      borderColor: "rgb(107, 114, 128)",
+                      y: -3
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                   >
                     <IconComponent 
                       size={24} 
                       className="text-[#aaaaaa] group-hover:text-[#007f5f] transition-colors duration-300"
                     />
-                  </a>
+                  </motion.a>
                 );
               })}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="text-center">
-            <a
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <motion.a
               href="mailto:ansonjaison@outlook.in"
-              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20"
+              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              whileHover={{ 
+                scale: 1.05,
+                backgroundColor: "#00664d",
+                boxShadow: "0 10px 25px rgba(0, 127, 95, 0.2)"
+              }}
+              whileTap={{ scale: 0.98 }}
             >
               <Mail size={20} />
               <span>Start a Conversation</span>
-            </a>
-          </div>
-        </div>
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ExternalLink, FileText, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -48,33 +49,76 @@ const Projects = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="text-[#007f5f]">Featured</span> Projects
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <div
+              <motion.div
                 key={project.title}
-                className="bg-[#1a1a1a] rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-all duration-300 group hover:scale-105 flex flex-col h-full"
+                className="bg-[#1a1a1a] rounded-2xl p-6 border border-gray-800 transition-all duration-300 group flex flex-col h-full"
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.03,
+                  borderColor: "rgb(55, 65, 81)",
+                  boxShadow: "0 10px 25px rgba(0, 127, 95, 0.1)"
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className="flex items-center mb-4">
-                  <div
+                  <motion.div
                     className="p-3 rounded-lg mr-4 flex-shrink-0"
                     style={{
                       backgroundColor: `${project.color}20`,
                       border: `1px solid ${project.color}40`
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
                   >
                     <IconComponent size={24} style={{ color: project.color }} />
-                  </div>
+                  </motion.div>
                   <h3 className="text-xl font-bold text-[#f5f5f5]">{project.title}</h3>
                 </div>
 
@@ -85,23 +129,29 @@ const Projects = () => {
 
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.links.map((link, linkIndex) => (
-                    <a
+                    <motion.a
                       key={linkIndex}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-2 px-4 py-2 border border-gray-600 text-[#aaaaaa] rounded-lg hover:border-gray-500 hover:text-[#f5f5f5] transition-all duration-300 text-sm w-full sm:w-auto"
+                      className="inline-flex items-center justify-center space-x-2 px-4 py-2 border border-gray-600 text-[#aaaaaa] rounded-lg transition-all duration-300 text-sm w-full sm:w-auto"
+                      whileHover={{ 
+                        borderColor: "rgb(107, 114, 128)",
+                        color: "#f5f5f5",
+                        y: -2
+                      }}
+                      whileTap={{ scale: 0.98 }}
                     >
                       {link.type === 'report' && <FileText size={16} />}
                       {link.type === 'live' && <ExternalLink size={16} />}
                       <span>{link.label}</span>
-                    </a>
+                    </motion.a>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

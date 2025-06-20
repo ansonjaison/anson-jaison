@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -15,44 +16,84 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="space-y-8 text-center lg:text-left">
+          <motion.div 
+            className="space-y-8 text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              <motion.h1 
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              >
                 Hello, I'm{' '}
                 <span className="text-[#007f5f] bg-gradient-to-r from-[#007f5f] to-[#00664d] bg-clip-text text-transparent">
                   Anson Jaison
                 </span>
-              </h1>
-              <p className="text-xl sm:text-2xl text-[#aaaaaa] leading-relaxed">
+              </motion.h1>
+              <motion.p 
+                className="text-xl sm:text-2xl text-[#aaaaaa] leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              >
                 A student exploring tech, design, and stories that connect people.
-              </p>
+              </motion.p>
             </div>
             
-            <p className="text-lg text-[#aaaaaa] italic">
+            <motion.p 
+              className="text-lg text-[#aaaaaa] italic"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            >
               Currently building useful tools and sharing learnings from the journey.
-            </p>
+            </motion.p>
 
-            <button
+            <motion.button
               onClick={scrollToContact}
-              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20 group"
+              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, backgroundColor: "#00664d" }}
+              whileTap={{ scale: 0.98 }}
             >
               <span>Let's Connect</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-          </div>
+              <motion.div
+                animate={{ x: 0 }}
+                whileHover={{ x: 4 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ArrowRight size={20} />
+              </motion.div>
+            </motion.button>
+          </motion.div>
 
           {/* Right content - Profile Image */}
-          <div className="flex justify-center lg:justify-end">
+          <motion.div 
+            className="flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          >
             <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#007f5f] hover:scale-105 transition-transform duration-300">
+              <motion.div 
+                className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#007f5f] transition-transform duration-300"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
                 <img
                   src="https://raw.githubusercontent.com/ansonjaison/ansonjaison.github.io/refs/heads/main/images/AnsonJaison.jpg"
                   alt="Anson Jaison"
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
