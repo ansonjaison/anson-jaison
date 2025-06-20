@@ -7,7 +7,15 @@ const About = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="text-[#007f5f]">A Bit</span> About Me
+            <span className="text-[#007f5f]">A Bit</span>{' '}
+            <a 
+              href="https://ansonblogs.netlify.app/posts/about-me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#007f5f] hover:text-[#00664d] transition-colors duration-300 underline decoration-2 underline-offset-4"
+            >
+              About Me
+            </a>
           </h2>
         </div>
 

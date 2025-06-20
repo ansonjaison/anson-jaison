@@ -32,7 +32,7 @@ const Certifications = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="text-[#f97316]">Certifications</span> & Achievements
+            <span className="text-[#007f5f]">Certifications</span> & Achievements
           </h2>
           <p className="text-lg text-[#aaaaaa]">
             Continuous learning through structured programs and certifications
@@ -48,8 +48,8 @@ const Certifications = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center mb-3">
-                    <div className="p-2 rounded-lg bg-[#f97316]/20 border border-[#f97316]/40 mr-4">
-                      <Award size={20} className="text-[#f97316]" />
+                    <div className="p-2 rounded-lg bg-[#007f5f]/20 border border-[#007f5f]/40 mr-4">
+                      <Award size={20} className="text-[#007f5f]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-[#f5f5f5] mb-1">{cert.title}</h3>
@@ -70,7 +70,7 @@ const Certifications = () => {
                     href={cert.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 bg-[#f97316] text-[#0d0d0d] px-6 py-3 rounded-lg font-semibold hover:bg-[#ea580c] transition-all duration-300 hover:scale-105 group"
+                    className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#0d0d0d] px-6 py-3 rounded-lg font-semibold hover:bg-[#00664d] transition-all duration-300 hover:scale-105 group"
                   >
                     <span>View Certificate</span>
                     <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform duration-300" />

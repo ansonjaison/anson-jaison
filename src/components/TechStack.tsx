@@ -1,29 +1,48 @@
 
 import React from 'react';
-import { Code, Server, Database, Settings, Terminal, Palette, Globe, FileText, Workflow } from 'lucide-react';
 
 const TechStack = () => {
   const technologies = [
-    { name: 'JavaScript', icon: Code, category: 'language' },
-    { name: 'HTML', icon: Globe, category: 'markup' },
-    { name: 'CSS', icon: Palette, category: 'styling' },
-    { name: 'Tailwind CSS', icon: Palette, category: 'styling' },
-    { name: 'C++', icon: Terminal, category: 'language' },
-    { name: 'Next.js', icon: Server, category: 'framework' },
-    { name: 'React Router', icon: Workflow, category: 'routing' },
-    { name: 'Nodemon', icon: Settings, category: 'tool' },
-    { name: 'Flask', icon: Server, category: 'backend' },
-    { name: 'Python', icon: Terminal, category: 'language' },
-    { name: 'C', icon: Terminal, category: 'language' },
-    { name: 'Mongoose', icon: Database, category: 'database' },
-    { name: 'Oracle', icon: Database, category: 'database' },
-    { name: 'Supabase', icon: Database, category: 'database' },
-    { name: 'Firebase', icon: Database, category: 'database' },
-    { name: 'Git', icon: Terminal, category: 'vcs' },
-    { name: 'GitHub', icon: Settings, category: 'platform' },
-    { name: 'VS Code', icon: Settings, category: 'editor' },
-    { name: 'Notion', icon: FileText, category: 'productivity' },
-    { name: 'Loveable', icon: Settings, category: 'platform' }
+    { 
+      name: 'Python', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
+    },
+    { 
+      name: 'C', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg'
+    },
+    { 
+      name: 'Flask', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg'
+    },
+    { 
+      name: 'HTML', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
+    },
+    { 
+      name: 'CSS', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
+    },
+    { 
+      name: 'JavaScript', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
+    },
+    { 
+      name: 'SQL', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg'
+    },
+    { 
+      name: 'Git', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
+    },
+    { 
+      name: 'VS Code', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg'
+    },
+    { 
+      name: 'Notion', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg'
+    }
   ];
 
   return (
@@ -38,30 +57,30 @@ const TechStack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {technologies.map((tech, index) => {
-            const IconComponent = tech.icon;
-            return (
-              <div
-                key={tech.name}
-                className="bg-[#1a1a1a] rounded-xl p-4 border border-gray-800 hover:border-[#007f5f] transition-all duration-300 group hover:scale-105 cursor-pointer"
-              >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div 
-                    className="p-3 rounded-lg bg-[#2a2a2a] group-hover:bg-[#007f5f]/20 transition-colors duration-300"
-                  >
-                    <IconComponent 
-                      size={24} 
-                      className="text-[#aaaaaa] group-hover:text-[#007f5f] transition-colors duration-300"
-                    />
-                  </div>
-                  <span className="text-sm font-medium text-[#aaaaaa] group-hover:text-[#f5f5f5] transition-colors duration-300">
-                    {tech.name}
-                  </span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {technologies.map((tech, index) => (
+            <div
+              key={tech.name}
+              className="bg-[#1a1a1a] rounded-xl p-4 border border-gray-800 hover:border-[#007f5f] transition-all duration-300 group hover:scale-105 cursor-pointer"
+            >
+              <div className="flex flex-col items-center text-center space-y-3">
+                <div className="p-3 rounded-lg bg-[#2a2a2a] group-hover:bg-[#007f5f]/20 transition-colors duration-300">
+                  <img 
+                    src={tech.logo} 
+                    alt={tech.name}
+                    className="w-8 h-8 object-contain"
+                    onError={(e) => {
+                      // Fallback if image fails to load
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                 </div>
+                <span className="text-sm font-medium text-[#aaaaaa] group-hover:text-[#f5f5f5] transition-colors duration-300">
+                  {tech.name}
+                </span>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
