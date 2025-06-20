@@ -12,11 +12,11 @@ const Blog = () => {
       date: '2024'
     },
     {
-      title: 'Meetups for Shy Tech Students',
-      excerpt: 'How introverted developers can still build meaningful connections in the tech community without feeling overwhelmed.',
-      tags: ['Career', 'Networking', 'Personal'],
+      title: 'How I Built This Portfolio Website',
+      excerpt: 'A complete breakdown of how I built this modern personal portfolio website using Lovable, React, TailwindCSS, and other modern tools.',
+      tags: ['Lovable', 'Vibe Coding', 'Personal'],
       readTime: '3 min read',
-      date: '2024'
+      date: '2025'
     },
     {
       title: 'FaceCertify: Building Without Knowing Everything',
