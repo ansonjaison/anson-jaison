@@ -62,7 +62,7 @@ const StarryBackground = () => {
           number: {
             density: {
               enable: true,
-              value_area: 800,
+              area: 800,
             },
             value: 80,
           },
@@ -74,7 +74,7 @@ const StarryBackground = () => {
             animation: {
               enable: true,
               speed: 1,
-              min: 0.1,
+              minimumValue: 0.1,
             },
           },
           shape: {
