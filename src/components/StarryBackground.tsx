@@ -26,7 +26,9 @@ const StarryBackground = () => {
               enable: true,
               mode: "attract",
             },
-            resize: true,
+            resize: {
+              enable: true,
+            },
           },
           modes: {
             attract: {
@@ -67,9 +69,6 @@ const StarryBackground = () => {
           },
           opacity: {
             value: 0.5,
-            random: {
-              enable: true,
-            },
             animation: {
               enable: true,
               speed: 1,
