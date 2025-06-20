@@ -87,7 +87,7 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img
-                  src="https://raw.githubusercontent.com/ansonjaison/ansonjaison.github.io/refs/heads/main/images/AnsonJaison.jpg"
+                  src="https://ansonblogs.netlify.app/images/ansonjaison.jpg"
                   alt="Anson Jaison"
                   className="w-full h-full object-cover"
                 />
