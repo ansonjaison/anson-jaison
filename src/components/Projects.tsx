@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, FileText, Users } from 'lucide-react';
+import { ExternalLink, FileText, Users, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
@@ -46,6 +46,20 @@ const Projects = () => {
           label: 'Visit Site'
         }
       ]
+    },
+    {
+      title: 'Personal Portfolio',
+      description: 'Modern portfolio website built with React and Framer Motion',
+      details: 'Responsive design, smooth animations, optimized performance with dark theme',
+      icon: Globe,
+      color: '#f59e0b',
+      links: [
+        {
+          type: 'live',
+          url: 'https://ansonblogs.netlify.app/',
+          label: 'View Site'
+        }
+      ]
     }
   ];
 
@@ -78,7 +92,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="text-[#007f5f]">Featured</span> Projects
@@ -86,7 +100,7 @@ const Projects = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

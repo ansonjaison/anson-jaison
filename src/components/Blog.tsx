@@ -25,6 +25,13 @@ const Blog = () => {
       tags: ['Machine Learning', 'Python', 'Learning'],
       date: '20 November 2023',
       url: 'https://ansonblogs.netlify.app/'
+    },
+    {
+      title: 'From Student to Developer: My Journey',
+      excerpt: 'Reflecting on the path from computer science student to building real-world applications and learning continuously.',
+      tags: ['Career', 'Learning', 'Personal Growth'],
+      date: '5 February 2025',
+      url: 'https://ansonblogs.netlify.app/'
     }
   ];
 
@@ -75,7 +82,7 @@ const Blog = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
