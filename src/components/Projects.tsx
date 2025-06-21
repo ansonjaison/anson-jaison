@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, FileText, Users, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -44,20 +43,6 @@ const Projects = () => {
           type: 'live',
           url: 'https://halfwayfootball.com',
           label: 'Visit Site'
-        }
-      ]
-    },
-    {
-      title: 'Personal Portfolio',
-      description: 'Modern portfolio website built with React and Framer Motion',
-      details: 'Responsive design, smooth animations, optimized performance with dark theme',
-      icon: Globe,
-      color: '#f59e0b',
-      links: [
-        {
-          type: 'live',
-          url: 'https://ansonblogs.netlify.app/',
-          label: 'View Site'
         }
       ]
     }
