@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Award, ExternalLink, Calendar } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Certifications = () => {
   const certifications = [
@@ -41,30 +42,74 @@ const Certifications = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="text-[#007f5f]">Certifications</span> & Achievements
           </h2>
           <p className="text-lg text-[#aaaaaa]">
             Continuous learning through structured programs and certifications
           </p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div 
+          className="space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {certifications.map((cert, index) => (
-            <div
+            <motion.div
               key={cert.title}
               className="bg-[#1a1a1a] rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-all duration-300 group"
+              variants={itemVariants}
+              whileHover={{ 
+                scale: 1.02,
+                borderColor: "rgb(55, 65, 81)",
+                boxShadow: "0 8px 20px rgba(0, 127, 95, 0.1)"
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center mb-3">
-                    <div className="p-2 rounded-lg bg-[#007f5f]/20 border border-[#007f5f]/40 mr-4">
+                    <motion.div 
+                      className="p-2 rounded-lg bg-[#007f5f]/20 border border-[#007f5f]/40 mr-4"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                    >
                       <Award size={20} className="text-[#007f5f]" />
-                    </div>
+                    </motion.div>
                     <div>
                       <h3 className="text-xl font-bold text-[#f5f5f5] mb-1">{cert.title}</h3>
                       <div className="flex items-center text-sm text-[#aaaaaa] space-x-4">
@@ -80,20 +125,22 @@ const Certifications = () => {
                 </div>
                 
                 <div className="flex-shrink-0">
-                  <a
+                  <motion.a
                     href={cert.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#0d0d0d] px-6 py-3 rounded-lg font-semibold hover:bg-[#00664d] transition-all duration-300 hover:scale-105 group"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     <span>View Certificate</span>
                     <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
+                  </motion.a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

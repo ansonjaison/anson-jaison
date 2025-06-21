@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,8 +47,17 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Connect Button */}
-          <div className="hidden md:block">
+          {/* Resume and Connect Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 group"
+            >
+              <FileText size={18} className="group-hover:scale-110 transition-transform duration-300" />
+              <span>Resume</span>
+            </a>
             <button
               onClick={() => scrollToSection('#contact')}
               className="bg-[#007f5f] text-[#f5f5f5] px-6 py-2 rounded-lg font-semibold hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20"
@@ -81,6 +90,15 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 px-3 py-2 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 mt-2"
+              >
+                <FileText size={18} />
+                <span>Resume</span>
+              </a>
               <button
                 onClick={() => scrollToSection('#contact')}
                 className="block w-full text-left px-3 py-2 bg-[#007f5f] text-[#f5f5f5] rounded-lg font-semibold mt-4 hover:bg-[#00664d] transition-colors duration-300"
