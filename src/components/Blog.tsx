@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -23,6 +24,13 @@ const Blog = () => {
       excerpt: 'The story of building a facial recognition system while learning TensorFlow and OpenCV from scratch.',
       tags: ['Machine Learning', 'Python', 'Learning'],
       date: '20 November 2023',
+      url: 'https://ansonblogs.netlify.app/'
+    },
+    {
+      title: 'From Student to Developer: My Journey',
+      excerpt: 'Reflecting on the path from computer science student to building real-world applications and learning continuously.',
+      tags: ['Career', 'Learning', 'Personal Growth'],
+      date: '5 February 2025',
       url: 'https://ansonblogs.netlify.app/'
     }
   ];
