@@ -67,12 +67,12 @@ const Header = () => {
           </div>
 
           {/* Tablet Navigation - visible only on tablet */}
-          <nav className="hidden md:flex lg:hidden space-x-4">
+          <nav className="hidden md:flex lg:hidden space-x-3">
             {navItems.slice(0, 4).map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300 relative group text-sm"
+                className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300 relative group text-sm px-2 py-1"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#007f5f] transition-all duration-300 group-hover:w-full"></span>
@@ -81,12 +81,12 @@ const Header = () => {
           </nav>
 
           {/* Tablet Resume and More Menu */}
-          <div className="hidden md:flex lg:hidden items-center space-x-3">
+          <div className="hidden md:flex lg:hidden items-center space-x-2">
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-1 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 group text-sm"
+              className="inline-flex items-center space-x-1 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 group text-sm px-2 py-1"
             >
               <FileText size={14} className="group-hover:scale-110 transition-transform duration-300" />
               <span className="hidden sm:inline">Resume</span>
