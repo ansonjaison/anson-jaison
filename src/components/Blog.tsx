@@ -16,7 +16,7 @@ const Blog = () => {
       title: 'How I Built This Portfolio Website',
       excerpt: 'A complete breakdown of how I built this modern personal portfolio website using Lovable, React, TailwindCSS, and other modern tools.',
       tags: ['Lovable', 'Vibe Coding', 'Personal'],
-      date: '20 June 2025',
+      date: '19 June 2025',
       url: 'https://ansonblogs.netlify.app/posts/how-i-build-portfolio-website-using-lovable/'
     },
     {
@@ -27,11 +27,11 @@ const Blog = () => {
       url: 'https://ansonblogs.netlify.app/'
     },
     {
-      title: 'From Student to Developer: My Journey',
-      excerpt: 'Reflecting on the path from computer science student to building real-world applications and learning continuously.',
-      tags: ['Career', 'Learning', 'Personal Growth'],
-      date: '5 February 2025',
-      url: 'https://ansonblogs.netlify.app/'
+      title: 'How I Built My Minimal Blog Website',
+      excerpt: 'From idea to deployment — how I built my own blog using Hugo, Netlify, and custom theming. Here's everything I learned.',
+      tags: ['Blog', 'Hugo', 'Personal'],
+      date: '20 June 2025',
+      url: 'https://ansonblogs.netlify.app/posts/how-to-build-a-minimal-blog-website/'
     }
   ];
 
