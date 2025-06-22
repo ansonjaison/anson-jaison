@@ -16,8 +16,8 @@ const Blog = () => {
       title: 'How I Built This Portfolio Website',
       excerpt: 'A complete breakdown of how I built this modern personal portfolio website using Lovable, React, TailwindCSS, and other modern tools.',
       tags: ['Lovable', 'Vibe Coding', 'Personal'],
-      date: '10 January 2025',
-      url: 'https://ansonblogs.netlify.app/'
+      date: '20 June 2025',
+      url: 'https://ansonblogs.netlify.app/posts/how-i-build-portfolio-website-using-lovable/'
     },
     {
       title: 'FaceCertify: Building Without Knowing Everything',
