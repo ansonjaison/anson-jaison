@@ -28,7 +28,7 @@ const Blog = () => {
     },
     {
       title: 'How I Built My Minimal Blog Website',
-      excerpt: 'From idea to deployment — how I built my own blog using Hugo, Netlify, and custom theming. Here's everything I learned.',
+      excerpt: "From idea to deployment — how I built my own blog using Hugo, Netlify, and custom theming. Here's everything I learned.",
       tags: ['Blog', 'Hugo', 'Personal'],
       date: '20 June 2025',
       url: 'https://ansonblogs.netlify.app/posts/how-to-build-a-minimal-blog-website/'
