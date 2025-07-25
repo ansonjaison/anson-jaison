@@ -47,10 +47,10 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Resume and Connect Buttons - hidden on tablet and below */}
-          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
+          {/* Desktop Resume Button - hidden on tablet and below */}
+          <div className="hidden lg:flex items-center">
             <a
-              href="#"
+              href="https://ansonblogs.netlify.app/Resume/Anson_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 group text-sm xl:text-base"
@@ -58,12 +58,6 @@ const Header = () => {
               <FileText size={16} className="group-hover:scale-110 transition-transform duration-300" />
               <span>Resume</span>
             </a>
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="bg-[#007f5f] text-[#f5f5f5] px-4 xl:px-6 py-2 rounded-lg font-semibold hover:bg-[#00664d] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#007f5f]/20 text-sm xl:text-base"
-            >
-              Connect
-            </button>
           </div>
 
           {/* Tablet Navigation - visible only on tablet */}
@@ -83,7 +77,7 @@ const Header = () => {
           {/* Tablet Resume and More Menu */}
           <div className="hidden md:flex lg:hidden items-center space-x-2">
             <a
-              href="#"
+              href="https://ansonblogs.netlify.app/Resume/Anson_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 group text-sm px-2 py-1"
@@ -127,7 +121,7 @@ const Header = () => {
               
               {/* Mobile-only resume link */}
               <a
-                href="#"
+                href="https://ansonblogs.netlify.app/Resume/Anson_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="md:hidden flex items-center space-x-2 px-3 py-2 text-[#aaaaaa] hover:text-[#007f5f] transition-colors duration-300 mt-2"
@@ -135,13 +129,6 @@ const Header = () => {
                 <FileText size={18} />
                 <span>Resume</span>
               </a>
-              
-              <button
-                onClick={() => scrollToSection('#contact')}
-                className="block w-full text-left px-3 py-2 bg-[#007f5f] text-[#f5f5f5] rounded-lg font-semibold mt-4 hover:bg-[#00664d] transition-colors duration-300 text-sm sm:text-base"
-              >
-                Connect
-              </button>
             </div>
           </div>
         )}

@@ -60,10 +60,10 @@ const Contact = () => {
               <div className="flex items-center space-x-2 text-lg">
                 <Mail size={20} className="text-[#007f5f]" />
                 <a 
-                  href="mailto:ansonjaison@outlook.in"
+                  href="mailto:ansonjaison.me@gmail.com"
                   className="text-[#f5f5f5] hover:text-[#007f5f] transition-colors duration-300 font-medium"
                 >
-                  ansonjaison@outlook.in
+                  ansonjaison.me@gmail.com
                 </a>
               </div>
             </div>
@@ -120,7 +120,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <motion.a
-              href="mailto:ansonjaison@outlook.in"
+              href="mailto:ansonjaison.me@gmail.com"
               className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,

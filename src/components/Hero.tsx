@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -53,24 +53,40 @@ const Hero = () => {
               Currently building useful tools and sharing learnings from the journey.
             </motion.p>
 
-            <motion.button
-              onClick={scrollToContact}
-              className="inline-flex items-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group"
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-              whileHover={{ scale: 1.05, backgroundColor: "#00664d" }}
-              whileTap={{ scale: 0.98 }}
             >
-              <span>Let's Connect</span>
-              <motion.div
-                animate={{ x: 0 }}
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              <motion.button
+                onClick={scrollToContact}
+                className="inline-flex items-center justify-center space-x-2 bg-[#007f5f] text-[#f5f5f5] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 group"
+                whileHover={{ scale: 1.05, backgroundColor: "#00664d" }}
+                whileTap={{ scale: 0.98 }}
               >
-                <ArrowRight size={20} />
-              </motion.div>
-            </motion.button>
+                <span>Let's Connect</span>
+                <motion.div
+                  animate={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <ArrowRight size={20} />
+                </motion.div>
+              </motion.button>
+              
+              <motion.a
+                href="https://ansonblogs.netlify.app/Resume/Anson_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center space-x-2 border border-[#007f5f] text-[#007f5f] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-[#007f5f] hover:text-[#f5f5f5] group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <FileText size={20} />
+                <span>View Resume</span>
+              </motion.a>
+            </motion.div>
           </motion.div>
 
           {/* Right content - Profile Image */}
